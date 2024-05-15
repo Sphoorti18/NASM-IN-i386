@@ -20,7 +20,9 @@
                      |---> UnPacked ==> 0 - 9
 ![Image of Data types] : https://github.com/Sphoorti18/NASM-IN-i386/blob/main/Website/BASICS/IMAGES/image1ForNasm.png
 //----------------------------------------------------------------------------------------------------------------------
-REGISTERS
+REGISTERS |---> General ==> Size : 32 bit ==> EAX, EBX, ECX, EDX, ESI & EDI
+          |---> Segment ==>
+          |---> Status & instruction
 
 
 /************************************************************************************************************************/
