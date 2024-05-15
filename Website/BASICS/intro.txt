@@ -13,6 +13,8 @@
              ==> Pointer (logical address) |--> Near ==> 32 bit ==> 16 bit segment + 16 bit offset
                                            |--> Far == 48 bit ==> 32 bit segment + 16 bit offset
              ==> String = Adjacent bytes, words and DW ==> Range : 0 - (2^32)-1
+             ==> BCD |---> Packed ==> 2 digits
+                     |---> UnPacked ==> 0 - 9
 
 
 /**********************************************************************************************/
