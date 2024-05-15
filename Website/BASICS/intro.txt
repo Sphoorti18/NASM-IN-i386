@@ -15,7 +15,7 @@
              ==> String = Adjacent bytes, words and DW ==> Range : 0 - (2^32)-1
              ==> BCD |---> Packed ==> 2 digits
                      |---> UnPacked ==> 0 - 9
-![Image of Data types](https://github.com/Sphoorti18/NASM-IN-i386/blob/main/Website/BASICS/IMAGES/image1ForNasm.png)
+![Image of Data types]https://github.com/Sphoorti18/NASM-IN-i386/blob/main/Website/BASICS/IMAGES/image1ForNasm.png
 
 
 /**********************************************************************************************/
