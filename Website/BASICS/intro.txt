@@ -9,6 +9,10 @@
 
 **DATA TYPES ==> 1 Byte = 8 bits, 1 Word = 2 Bytes, Double Word = DW = 2 Bytes
              ==> INteger contained in DW, Word, Byte ==> Range : -2^7 to [(2^7)-1]
+             ==> Ordinal = Unsigned Integer ==> Range : 0 to [(2^7)-1]
+             ==> Pointer (logical address) |--> Near ==> 32 bit ==> 16 bit segment + 16 bit offset
+                                           |--> Far == 48 bit ==> 32 bit segment + 16 bit offset
+             ==> String = Adjacent bytes, words and DW ==> Range : 0 - (2^32)-1
 
 
 /**********************************************************************************************/
