@@ -8,7 +8,7 @@ Logical == Segment (selector + offset)
            |--> CODE SEGMENT -->> Properties like base address, limits and access rights
            |--> DATA SEGMENT
 //---------------------------------------------------------------------------------------------------------
-PAGE TRANSLATION 
+PAGE TRANSLATION (This step is optional due to the mercy of programmers)
 (Linear -->> Physical) address
 /*********************************************************************************************************/
 THE END :):););)
