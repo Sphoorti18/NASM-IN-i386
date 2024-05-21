@@ -1,6 +1,6 @@
 /***********************************************************************************************************************/
 
-**BASIC PROGRAMMING MODEL |----> FLAT ==> 4 GB == 2^2*2^30 == 2^32 bits 
+**BASIC PROGRAMMING MODEL |----> FLAT(TOC) ==> 4 GB == 2^2*2^30 == 2^32 bits 
                                  ==> MAPPING b/t 4GB data to 2^32 physical address lines
                           
                           |----> SEGMENTED ==> 2^64 bits ==> 2^8 * 2^56 bits == 64 TB 
