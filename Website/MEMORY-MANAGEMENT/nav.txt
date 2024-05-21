@@ -2,12 +2,14 @@
 Image : https://github.com/Sphoorti18/NASM-IN-i386/blob/main/Website/MEMORY-MANAGEMENT/Address%20Translation.png
 
 SEGMENT TRANSLATION
-(Logical -->> Linear) address VIA DESCRIPTERS + SELECTORS FOR SEGMENT REGISTERS
+(Logical -->> Linear) address VIA SEGMENT |-->> DESCRIPTORS + DESCRIPTOR TABLES
+                                          |-->> SELECTORS 
+                                          |-->> REGISTERS
 Logical Address == Segment (selector (16 bits) + offset (32 bits))
 |--> DESCRIPTORS == DEFINING STATS FOR SEGMENT REGISTERS
 |
 |--> TYPES |--> SYSTEM SEGMENT -->> Used for LDT(Local Descriptor Table) + TSS (Task Switching Segment)
-           |--> CODE SEGMENT -->> Properties like base address, limits and access rights
+           |--> CODE SEGMENT -->> 
            |--> DATA SEGMENT
 //---------------------------------------------------------------------------------------------------------
 PAGE TRANSLATION (This step is optional due to the mercy of programmers)
