@@ -1,7 +1,8 @@
 /*********************************************************************************************************/
+Image : 
 SEGMENT TRANSLATION
-(Logical -->> Linear) address VIA DESCRIPTERS + SELECTORS FOR SEGMENT REGISTORS
-Logical == Segment (selector + offset)
+(Logical -->> Linear) address VIA DESCRIPTERS + SELECTORS FOR SEGMENT REGISTERS
+Logical Address == Segment (selector (16 bits) + offset (32 bits))
 |--> DESCRIPTORS == DEFINING STATS FOR SEGMENT REGISTERS
 |
 |--> TYPES |--> SYSTEM SEGMENT -->> Used for LDT(Local Descriptor Table) + TSS (Task Switching Segment)
@@ -10,5 +11,6 @@ Logical == Segment (selector + offset)
 //---------------------------------------------------------------------------------------------------------
 PAGE TRANSLATION (This step is optional due to the mercy of programmers)
 (Linear -->> Physical) address
+Linear Address (Size : 32 bit) == Directory + Page + Offset
 /*********************************************************************************************************/
 THE END :):););)
