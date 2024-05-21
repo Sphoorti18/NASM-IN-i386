@@ -1,5 +1,6 @@
 /*********************************************************************************************************/
-Image : 
+Image : https://github.com/Sphoorti18/NASM-IN-i386/blob/main/Website/MEMORY-MANAGEMENT/Address%20Translation.png
+
 SEGMENT TRANSLATION
 (Logical -->> Linear) address VIA DESCRIPTERS + SELECTORS FOR SEGMENT REGISTERS
 Logical Address == Segment (selector (16 bits) + offset (32 bits))
