@@ -1,1 +1,14 @@
-
+/*********************************************************************************************************/
+SEGMENT TRANSLATION
+(Logical -->> Linear) address VIA DESCRIPTERS + SELECTORS FOR SEGMENT REGISTORS
+Logical == Segment (selector + offset)
+|--> DESCRIPTORS == DEFINING STATS FOR SEGMENT REGISTERS
+|
+|--> TYPES |--> SYSTEM SEGMENT -->> Used for LDT(Local Descriptor Table) + TSS (Task Switching Segment)
+           |--> CODE SEGMENT -->> Properties like base address, limits and access rights
+           |--> DATA SEGMENT
+//---------------------------------------------------------------------------------------------------------
+PAGE TRANSLATION 
+(Linear -->> Physical) address
+/*********************************************************************************************************/
+THE END :):););)
