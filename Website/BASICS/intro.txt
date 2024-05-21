@@ -3,9 +3,9 @@
 **BASIC PROGRAMMING MODEL |----> FLAT(TOC) ==> 4 GB == 2^2*2^30 == 2^32 bits 
                                  ==> MAPPING b/t 4GB data to 2^32 physical address lines
                           
-                          |----> SEGMENTED ==> 2^64 bits ==> 2^8 * 2^56 bits == 64 TB 
+                          |----> SEGMENTED ==> 2^64 bits ==> 2^6 * 2^40 bits == 64 TB 
                                  ==> MAPPING B/T 64 TB logical address lines to 2^32 physical address lines 
-                                 ==> Logical address has 2^8 * 2^56 possible lines (1D) and it contains
+                                 ==> Logical address has 64 possible lines (1D) and it contains
                                      segment selector (size = 16 bits) + offset (32 bits)
 
 //----------------------------------------------------------------------------------------------------------------------
