@@ -23,7 +23,7 @@
 //----------------------------------------------------------------------------------------------------------------------
 REGISTERS |---> General ==> Size : 32 bit ==> EAX, EBX, ECX, EDX, ESI & EDI
           |---> Segment ==> Permits to choose flat or segmented model.
-          |---> Status & instruction
+          |---> Status & instruction ==> Modify i386 processor state
 
 
 /************************************************************************************************************************/
