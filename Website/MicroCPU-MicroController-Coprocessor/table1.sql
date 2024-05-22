@@ -17,6 +17,7 @@ INSERT INTO ArchitectureComparison (Feature, i386, i387, i85) VALUES
 
 -- Notes:
 -- i386 == Boss, i387 == Secretary, i85 == employee IN A COMPANY.
+-- Addressing modes => i386 == i387 (Limited) == i85 == direct (variable) + indirect (ptr) + immedite (value) 
 -- i386 is a general-purpose microprocessor with a complex x86 instruction set and memory management features.
 -- i387 is a specialized coprocessor that extends the i386's capabilities for floating-point math.
 -- i85 is a microcontroller with a simpler 8-bit instruction set and Harvard architecture for memory efficiency in embedded systems.
