@@ -4,8 +4,11 @@ Prority of tasks is ranged from urgent to mundane tasks!
 Running the current tasks + next task is put on hold (waiting mode).
 
 #Characters ==> Task ==> a) State Segment == Current Task is being saved! Divided in 2 sections
-                                          == I) Dynamic = Updates are constantly being made to inform the processor about the changes.
+                                          == I) Dynamic = Updates are constantly being made to inform the processor about the changes. 
+                                                These store : General purpose registers (32 bit), Segment registers (CS, DS, SS, ES, FS, 
+                                                OS), EFLAGS and EIP (Instruction pointer).
                                           == II) Static = It's read only field for the processor.
+                                                
                                                       
                          a.1) Descriptor
                          a.2) Gate Descriptor
