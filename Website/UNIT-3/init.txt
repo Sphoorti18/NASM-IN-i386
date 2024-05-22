@@ -13,7 +13,7 @@ but additional initialisation is required before utilizing all the features of t
 DX register is the main player which holds the number associated with processor type.
 But why? There are thousands of microprocessor chips and to keep track of them we use number ID.
 
-HOW THIS IS DONE? :(
+HOW THIS IS DONE in CIRCUIT NOTATION? :(
 1) 
 //-----------------------------------------------------------------------------------------------------------------------------
 
@@ -27,7 +27,7 @@ players for **protected mode**.
 2) The INT VECTOR TABLE is initialised with pointers to interrupt and exception handlers at index 0, 
 before it can handle interrupts
 or exceptions.
-3) NMI is always enabled.
+3)NMI is always enabled.
 4) To load maskable interrupts or NMI handlers in RAM or memory, there will be time slot after RESET,
 where NMI interrupts are disabled.
 
@@ -39,13 +39,23 @@ where NMI interrupts are disabled.
 2) The processor supports segmented models like
 
 **SYSTEM TABLES**
-1) To ACCESS software program, it needs to load at least one of the descriptors, i.e GDT mainly and 
-2 descripters must be created out of 2^13 descripters.
+1) To ACCESS software program, it needs to load at least one of the descriptors, i.e GDT mainly 
+(coz, processor never uses index 0) and 2 descripters must be created out of 2^13 descripters.
 2) Descriptors are used for code and data segments (CS + DS, ES, GS).
+3) The stack is in read/write mode, so no descriptors.
 
 **NMI INTERRUPTS**
-###SOFTWARE INITIALIZATION for **Virtual Addressing Mode**
-1) After RESET,
+//-----------------------------------------------------------------------------------------------------------------------------
 
+###SOFTWARE INITIALIZATION for **VIRTUAL Addressing Mode** (i86)
+Supports older versions like i88, i188, etc
+The purpose is to excute Virtual i86 task.
+
+1) The processor is in *virtual mode* when VM bit in EFLAGS is set (responsible for status and control). 
+//------------------------------------------------------------------------------------------------------------------------------
+
+###DEBUGGING
+The process of identifying and removing bugs in the software programs.
+It gives the power to programmer to look at dynamic state of the processor.
 /*****************************************************************************************************************/
 THE END ;);)
