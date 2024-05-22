@@ -8,7 +8,7 @@ CREATE TABLE ArchitectureComparison (
 INSERT INTO ArchitectureComparison (Feature, i386, i387, i85) VALUES
 ('Type', 'CPU', 'Math Coprocessor', 'Microcontroller'),
 ('Instruction Set', 'x86', 'x87 (Floating-point unit)', '8085 instruction set'),
-('Register File', '32-bit General purpose registers', '64KB registers for floating-point operations', '8-bit registers (Accumulator, B, C, D, E, H, L, Flag register)'),
+('Register File', '2^5-bit General purpose registers', '2^4*4KB registers for floating-point operations', '2^3-bit registers (Accumulator, B, C, D, E, H, L, Flag register)'),
 ('Memory Architecture', 'Segmented memory management', 'No dedicated memory (only registers)', 'Harvard architecture (Separate program and data memory)'),
 ('Addressing Modes', 'Multiple addressing modes (Register direct, register indirect, immediate, etc.)', 'Limited addressing modes', 'Simple addressing modes (direct, indirect, immediate)'),
 ('ALU', '32-bit Arithmetic Logic Unit', 'Not applicable', '8-bit ALU'),
