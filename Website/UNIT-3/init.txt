@@ -32,6 +32,9 @@ or exceptions.
 where NMI interrupts are disabled.
 
 **NMI INTERRUPTS**
+Hardware must provide a mechanism to prevent NMIs from lurking in, while the processor is in time slot.
+
+**1st INSTRUCTION**
 //------------------------------------------------------------------------------------------------------------------------------
 
 ###SWITCHING TO **PROTECTED MODE** (i286 and i386)
