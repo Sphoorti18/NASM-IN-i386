@@ -3,7 +3,10 @@
 Prority of tasks is ranged from urgent to mundane tasks!
 Running the current tasks + next task is put on hold (waiting mode).
 
-#Characters ==> Task ==> a) State Segment 
+#Characters ==> Task ==> a) State Segment == Current Task is being saved! Divided in 2 sections
+                                          == I) Dynamic = Updates are constantly being made to inform the processor about the changes.
+                                          == II) Static = It read only field for the processor.
+                                                      
                          a.1) Descriptor
                          a.2) Gate Descriptor
                      ==> b) Switching = 
