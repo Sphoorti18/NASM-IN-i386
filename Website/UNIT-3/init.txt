@@ -1,1 +1,51 @@
+/*****************************************************************************************************************/
+###PROCESSOR AFTER RESET
 
+Reset == Past <-- Present 
+<----|--------|---------|----->
+   Past    Present  Future
+
+PROCESSOR Chip has several pins, the main pins are #BUSY and #RESET PINS in this scenario.
+
+When the signal is ON for RESER pin then certain registers are set to pre-defined values.
+This is done for bootstrap program (initialising OS program, OS is the middleman b/t hardware and software) 
+but additional initialisation is required before utilizing all the features of the processor.
+DX register is the main player which holds the number associated with processor type.
+But why? There are thousands of microprocessor chips and to keep track of them we use number ID.
+
+HOW THIS IS DONE? :(
+1) 
+//-----------------------------------------------------------------------------------------------------------------------------
+
+###SOFTWARE INITIALIZATION for **REAL-ADDRESSING MODE**
+1) After RESET, data structures are set up for i86 processor to use it for handling interrupts or exceptions.
+2) While processor remains in **real addressing mode** then it sets up the data structures to utilize i286 and i386 
+players for **protected mode**.
+
+**SYSTEM TABLES**
+1) NO to *descripter tables*!
+2) The INT VECTOR TABLE is initialised with pointers to interrupt and exception handlers at index 0, 
+before it can handle interrupts
+or exceptions.
+3) NMI is always enabled.
+4) To load maskable interrupts or NMI handlers in RAM or memory, there will be time slot after RESET,
+where NMI interrupts are disabled.
+
+**NMI INTERRUPTS**
+//------------------------------------------------------------------------------------------------------------------------------
+
+###SWITCHING TO **PROTECTED MODE** (i286 and i386)
+1) The data structures is dependent on memory management features.
+2) The processor supports segmented models like
+
+**SYSTEM TABLES**
+1) To ACCESS software program, it needs to load at least one of the descriptors, i.e GDT mainly and 
+2 descripters must be created out of 2^13 descripters.
+2) Descriptors are used for code and data segments (CS + DS, ES, GS).
+
+**NMI INTERRUPTS**
+###SOFTWARE INITIALIZATION for **Virtual Addressing Mode**
+1) After RESET,
+
+/*****************************************************************************************************************/
+THE END ;);)
