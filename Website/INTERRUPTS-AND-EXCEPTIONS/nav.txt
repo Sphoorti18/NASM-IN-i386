@@ -3,10 +3,22 @@ Special type of control transfer (Conditional and loop statements in programming
 Change the normal flow of the code execution to handle interrupts or exceptions.
 
 ###Difference b/t Exceptions and Interrupts
-**Exceptions** ==> TYPES/ SRC's |--> PROCESSOR DETECTED ==> Faults, traps and aborts.
-                                |--> SOFTWARE INTERRUPTS/ PROGRAMMED == INTO, INT 3, INT n and BOUND can trigger exceptions
-               ==> IDENTIFYING |--> Associating ID numbers to different interrupts 
+**Exceptions** ==> TYPES/ SRC's |-->> PROCESSOR DETECTED ==> 1) Faults, 2) traps and 3) aborts.
+                                |-->> 1) Faults : Happens Before the start of instruction or during the execution of instruction
+                                |-->> 2) Traps :
+                                |-->> 3) Aborts :
+                                |-->> SOFTWARE INTERRUPTS/ PROGRAMMED == INTO, INT 3, INT n and BOUND can trigger exceptions
+               ==> IDENTIFYING |--> Associating ID numbers to different exceptions
+                   IDENTIFIERS |--> Exceptions are assigned the numbers from 0 to 31. Not all the numbers are in use but they are 
+                                    reserved for intel to expand it in the future.
+               ==> ENABLE / DISABLE INTs |--> Processor attends to Exceptions at the end of one instruction and beginning of next 
+                                              instruction. 
+
                
 **Interrupts** ==> TYPES/ SRC's |--> MASKABLE ==> Signalled via INTR pin
                                 |--> NON-MASKABLE ==> Signalled via NMI pin
                ==> IDENTIFYING |--> Associating ID numbers to different interrupts 
+                   IDENTIFIERS |--> NMI are assigned the numbers in the range from 0 to 31. Not all the numbers are in use but they are 
+                                    reserved for intel to expand it in the future.
+               ==> ENABLE / DISABLE INTs |--> Processor attends to Interrupts at the end of one instruction and beginning of next 
+                                              instruction. 
