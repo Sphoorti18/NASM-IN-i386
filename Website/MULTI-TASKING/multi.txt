@@ -1,4 +1,14 @@
 /****************************************************************************************************************/
+###MULTI-TASKING
+Prority of tasks is ranged from urgent to mundane tasks!
+Running the current tasks + next task is put on hold (waiting mode).
 
+#Characters ==> Task ==> a) State Segment 
+                         a.1) Descriptor
+                         a.2) Gate Descriptor
+                     ==> b) Switching = 
+                     ==> c) Linking 
+                     ==> d) Address space
+            
 /****************************************************************************************************************/
 THE END ;);)
