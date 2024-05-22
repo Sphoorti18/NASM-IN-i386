@@ -10,11 +10,12 @@ Logical address = selector(16 bit) + offset (32 bit)
                                                        |--> LDT = 
                                                 ## Processor locates GDT and LDT indices via GDTR and LDTR registers
 
-                                          |-->> ** DESCRIPTORS = Contains data for the processor to map it from Logical to Linear.
-                                                               = Created by linkers, compilers, loaders or OS
-                                                               = Format = Segment (Base + Limit) field
+                                          |-->> ** DESCRIPTORS => Contains data for the processor to map it from Logical to Linear.
+                                                               => Created by linkers, compilers, loaders or OS
+                                                               => Format = Segment (Base + Limit) field
                                                     
-                                          |-->> SELECTORS = 
+                                          |-->> SELECTORS => Identifies the descriptor within descriptor table (0 to m)
+                                                          => Format : a)Index b) Table indicator , c) RPL = Protection mechanism
                                           |-->> REGISTERS
 //---------------------------------------------------------------------------------------------------------
 PAGE TRANSLATION (This step is optional due to the mercy of programmers)
