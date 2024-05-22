@@ -13,3 +13,4 @@ INSERT INTO i386_i387_Comparison (Feature, i386, i387) VALUES
 ('Performance', 'Slower for floating-point calculations (handled by software emulation)', 'Significantly faster floating-point performance compared to software emulation'),
 ('Notes', 'Early i386 motherboards might have had a socket for the older 80287 coprocessor.', '');
 
+ 
