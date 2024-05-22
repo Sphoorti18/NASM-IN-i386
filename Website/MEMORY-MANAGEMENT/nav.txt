@@ -2,18 +2,26 @@
 Image : https://github.com/Sphoorti18/NASM-IN-i386/blob/main/Website/MEMORY-MANAGEMENT/Address%20Translation.png
 
 SEGMENT TRANSLATION
-(Logical -->> Linear) address VIA SEGMENT |-->> DESCRIPTORS + DESCRIPTOR TABLES
-                                          |-->> SELECTORS 
+Logical address = selector(16 bit) + offset (32 bit)
+(Logical -->> Linear) address VIA SEGMENT |-->> ## DESCRIPTOR TABLES = Contains descriptors of size 8 bytes = 64 bits.
+                                                                     = Size of table isn't fixed and may contain 2^13 descriptors.
+                                                                     = The indices are labelled from 0, n, n+1 ... m
+                                          |-->> Types  |--> GDT = The 1st entry is not used by processor (index 0).
+                                                       |--> LDT = 
+                                                ## Processor locates GDT and LDT indices via GDTR and LDTR registers
+
+                                          |-->> ** DESCRIPTORS = Contains data for the processor to map it from Logical to Linear.
+                                                               = Created by linkers, compilers, loaders or OS
+                                                               = Format = Segment (Base + Limit) field
+                                                    
+                                          |-->> SELECTORS = 
                                           |-->> REGISTERS
-Logical Address == Segment (selector (16 bits) + offset (32 bits))
-|--> DESCRIPTORS == DEFINING STATS FOR SEGMENT REGISTERS
-|
-|--> TYPES |--> SYSTEM SEGMENT -->> Used for LDT(Local Descriptor Table) + TSS (Task Switching Segment)
-           |--> CODE SEGMENT -->> 
-           |--> DATA SEGMENT
 //---------------------------------------------------------------------------------------------------------
 PAGE TRANSLATION (This step is optional due to the mercy of programmers)
 (Linear -->> Physical) address
 Linear Address (Size : 32 bit) == Directory + Page + Offset
+
+//--------------------------------------------------------------------------------------------------------
+
 /*********************************************************************************************************/
 THE END :):););)
