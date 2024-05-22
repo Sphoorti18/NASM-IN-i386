@@ -33,13 +33,14 @@ where NMI interrupts are disabled.
 
 **NMI INTERRUPTS**
 Hardware must provide a mechanism to prevent NMIs from lurking in, while the processor is in time slot.
+1) SOLUTIONS are ...
 
 **1st INSTRUCTION**
 //------------------------------------------------------------------------------------------------------------------------------
 
 ###SWITCHING TO **PROTECTED MODE** (i286 and i386)
 1) The data structures is dependent on memory management features.
-2) The processor supports segmented models like
+2) The processor supports segmented models like ...
 
 **SYSTEM TABLES**
 1) To ACCESS software program, it needs to load at least one of the descriptors, i.e GDT mainly 
@@ -48,6 +49,9 @@ Hardware must provide a mechanism to prevent NMIs from lurking in, while the pro
 3) The stack is in read/write mode, so no descriptors.
 
 **NMI INTERRUPTS**
+If the hardware allows NMI, the it should provide LDT and a gate for NMI Interrupt handler routine is enabled.
+Before using LDT, the base address and limit (size) of LDT must be stored in LDTR register.
+
 //-----------------------------------------------------------------------------------------------------------------------------
 
 ###SOFTWARE INITIALIZATION for **VIRTUAL Addressing Mode** (i86)
@@ -56,9 +60,12 @@ The purpose is to excute Virtual i86 task.
 
 1) The processor is in *virtual mode* when VM bit in EFLAGS is set (responsible for status and control). 
 //------------------------------------------------------------------------------------------------------------------------------
-
 ###DEBUGGING
 The process of identifying and removing bugs in the software programs.
-It gives the power to programmer to look at dynamic state of the processor.
+It gives the power to programmer to look at dynamic (complicated) state of the processor.
+It gives step by step on which code is being executed so that the fault can be detected.
+The DEBUGGING hardware provides breakpoints so that the fault can be easily found. 
+
+###DEBUGGING Features of i386
 /*****************************************************************************************************************/
 THE END ;);)
