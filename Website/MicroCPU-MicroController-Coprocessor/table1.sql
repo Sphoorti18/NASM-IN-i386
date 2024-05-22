@@ -16,6 +16,7 @@ INSERT INTO ArchitectureComparison (Feature, i386, i387, i85) VALUES
 ('Coprocessor Support', 'Can integrate a math coprocessor (i387)', 'Not applicable', 'No coprocessor support');
 
 -- Notes:
+-- i386 == Boss, i387 == Secretary, i85 == employee IN A COMPANY.
 -- i386 is a general-purpose microprocessor with a complex x86 instruction set and memory management features.
 -- i387 is a specialized coprocessor that extends the i386's capabilities for floating-point math.
 -- i85 is a microcontroller with a simpler 8-bit instruction set and Harvard architecture for memory efficiency in embedded systems.
@@ -26,3 +27,4 @@ INSERT INTO ArchitectureComparison (Feature, i386, i387, i85) VALUES
 -- Addressing modes: Limited addressing modes compared to i386, including direct, indirect, and immediate addressing.
 -- Stack: Some versions of the i85 might have a small stack for subroutine calls and temporary data storage.
 -- Interrupts: Supports a limited number of interrupt sources for handling external events.
+
