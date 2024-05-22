@@ -1,6 +1,23 @@
+/****************************************************************************************************************************/
 ###Overview
 It's a hardware to determine whether the memory references follow certain protection rules. All this is done before memory cycle starts.
 Violation of the rule stops the starting of memory cycle which results in exception.
 The concept of privilege and protection hardware applies to concept of address translation (segmentation lvl + page lvl).
 Data privilege == Data structures have assigned trust from less trusted procedures.
-Procedure Privilege == Assigned trust to not harm other procedures or data
+Procedure Privilege == Assigned trust to not harm other procedures or data.
+
+//--------------------------------------------------------------------------------------------------------------------------
+###SEGMENT LEVEL PROTECTION
+##Five aspects
+a) Segment Type checking
+b) Segment Limit checking (size)
+c) Restriction of |--> Address =
+                          
+                  |--> Procedure (Function in C programing Lang.) =
+                  |--> Instruction set
+Segment is basic cell of protection, segment descriptors store privilege levels and info about each segment.
+Protection checks are automatically done by processor via segment selector
+
+###PAGE LEVEL PROTECTION
+/***************************************************************************************************************************/
+THE END ;);)
