@@ -1,4 +1,7 @@
 /****************************************************************************************************************************/
+GLOSSARY : 
+a) OS = Operating System
+//----------------------------------------------------------------------------------------------------------------------------
 ###Overview
 It's a hardware to determine whether the memory references follow certain protection rules. All this is done before memory cycle starts.
 Violation of the rule stops the starting of memory cycle which results in exception.
@@ -26,6 +29,10 @@ Segment is basic cell/unit of protection, segment descriptors store privilege le
 Protection checks are automatically done by processor via segment selector which points to Descriptor table that contains segment descriptors.
 Segment descriptors provides the processor/CPU the data required to map from Logical address to Linear address.
 Segment registers hold the protection bits of the currently addressable segment descriptors.
+
+#----------------------------------------------------------------------------------------------------------------------------
+Privilege Levels ==> 0 to 3 (4 levels)
+0 == OS kernel ; 1+2 == OS services ; 3 = Apps or folders on GUI
 
 #----------------------------------------------------------------------------------------------------------------------------
 
