@@ -10,14 +10,15 @@ Procedure Privilege == Assigned trust to not harm other procedures or data.
 
 ###SEGMENT LEVEL PROTECTION
 ##Five aspects
-a) Segment Type checking
-b) Segment Limit checking (size)
+a) Segment Type checking = Used to detect illegal activities performed by segments.
+b) Segment Limit checking (size) = Out of bounds ==> The average size of data depends on the Granularity bit in base field.
+                                   Granularity bit checks whether the size of data is 1B (Byte) or NOT!
 c) Restriction of |--> Address =
                           
                   |--> Procedure (Function in C programing Lang.) =
                   |--> Instruction set
 
-Segment is basic cell of protection, segment descriptors store privilege levels and info about each segment.
+Segment is basic cell/unit of protection, segment descriptors store privilege levels and info about each segment.
 Protection checks are automatically done by processor via segment selector which points to Descriptor table that contains segment descriptors.
 Segment descriptors provides the processor/CPU the data required to map from Logical address to Linear address.
 Segment registers hold the protection bits of the currently addressable segment descriptors.
