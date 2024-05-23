@@ -13,6 +13,10 @@ Procedure Privilege == Assigned trust to not harm other procedures or data.
 a) Segment Type checking = Used to detect illegal activities performed by segments.
 b) Segment Limit checking (size) = Out of bounds ==> The average size of data depends on the Granularity bit in base field.
                                    Granularity bit checks whether the size of data is 1B (Byte) or NOT!
+                                   Data segment descriptors have something called E (Expansion/Direction) bit.
+                                   E is a notation for 1 bit of Type field.
+                                   Limit field catches errors like runaway subscripts + invalid pointer calculations.
+                                   Without this, it will overwite the critical data present in the memory.
 c) Restriction of |--> Address =
                           
                   |--> Procedure (Function in C programing Lang.) =
