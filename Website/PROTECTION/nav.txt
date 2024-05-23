@@ -7,6 +7,7 @@ Data privilege == Data structures have assigned trust from less trusted procedur
 Procedure Privilege == Assigned trust to not harm other procedures or data.
 
 //--------------------------------------------------------------------------------------------------------------------------
+
 ###SEGMENT LEVEL PROTECTION
 ##Five aspects
 a) Segment Type checking
@@ -15,9 +16,15 @@ c) Restriction of |--> Address =
                           
                   |--> Procedure (Function in C programing Lang.) =
                   |--> Instruction set
+
 Segment is basic cell of protection, segment descriptors store privilege levels and info about each segment.
-Protection checks are automatically done by processor via segment selector
+Protection checks are automatically done by processor via segment selector which points to Descriptor table that contains segment descriptors.
+Segment descriptors provides the processor/CPU the data required to map from Logical address to Linear address.
+Segment registers hold the protection bits of the currently addressable segment descriptors.
+
+#----------------------------------------------------------------------------------------------------------------------------
 
 ###PAGE LEVEL PROTECTION
+
 /***************************************************************************************************************************/
 THE END ;);)
