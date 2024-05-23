@@ -7,8 +7,8 @@
 1. **Q1.**
    - **a)** Salient features of 80386DX include:
      - 32-bit architecture
-     - 4 GB physical memory addressing
-     - 64 TB virtual memory addressing
+     - 4 GB physical memory addressing (2^2 GB)
+     - 64 TB virtual memory addressing 
      - Paging and segmentation support
      - Enhanced instruction set for multitasking and protection.
    - **b)** Physical address formation in Protected Virtual Address Mode (PVAM) involves:
