@@ -11,7 +11,7 @@ INSERT INTO ProcessorInitialization (Section, Details) VALUES
 
 ('SWITCHING TO PROTECTED MODE (i286 and i386)', '1) The data structures is dependent on memory management features.\n2) The processor supports segmented models like ...\n\nSYSTEM TABLES\n1) To ACCESS software program, it needs to load at least one of the descriptors, i.e GDT mainly\n(coz, processor never uses index 0) and 2 descripters must be created out of 2^13 descripters.\n2) Descriptors are used for code and data segments (CS + DS, ES, GS).\n3) The stack is in read/write mode, so no descriptors.\n\nNMI INTERRUPTS\nIf the hardware allows NMI, the it should provide LDT and a gate for NMI Interrupt handler routine is enabled.\nBefore using LDT, the base address and limit (size) of LDT must be stored in LDTR register.'),
 
-('SOFTWARE INITIALIZATION for VIRTUAL Addressing Mode (i86)', 'Supports older versions like i88, i188, etc\nThe purpose is to execute Virtual i86 task.\n\n1) The processor is in virtual mode when VM bit in EFLAGS is set (responsible for status and control).'),
+('SOFTWARE INITIALIZATION for VIRTUAL Addressing Mode (i86)', 'Supports older versions like i88, i188, etc\nThe purpose is to execute Virtual i86 task.\n\n1) The processor is in virtual mode when VM bit in EFLAGS CRed or Green) is set (responsible for status and control).'),
 
 ('DEBUGGING', 'The process of identifying and removing bugs in the software programs.\nIt gives the power to programmer to look at dynamic (complicated) state of the processor.\nIt gives step by step on which code is being executed so that the fault can be detected.\nThe DEBUGGING hardware provides breakpoints so that the fault can be easily found.\n\nDEBUGGING Features of i386');
 
