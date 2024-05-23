@@ -3,18 +3,21 @@
 Prority of tasks is ranged from urgent to mundane tasks!
 Running the current tasks + next task is put on hold (waiting mode).
 
-#Characters ==> Task ==> a) State Segment == Current Task is being saved! Divided in 2 sections
+#Characters ==> Task ==> a) State Segment == Current Task is being saved! Divided in 2 fields
                                           == I) Dynamic = Updates are constantly being made to inform the processor about the changes. 
                                                 These store : General purpose registers (32 bit), Segment registers (CS, DS, SS, ES, FS, 
                                                 OS), EFLAGS and EIP (Instruction pointer).
                                           == II) Static = It's read only field for the processor.
                                                 
                                                       
-                         a.1) Descriptor
+                         a.1) *Descriptor* == To Describe TSS. The BUSY bit in Type field indicates whether the task is busy or not.
+                                           == In Type field, 9 == Inactive Task + 11 == Busy task
+ 
                          a.2) Gate Descriptor
                      ==> b) Switching = 
                      ==> c) Linking 
                      ==> d) Address space
+                     ==> e) Register = Is used to find current TSS
             
 /****************************************************************************************************************/
 THE END ;);)
